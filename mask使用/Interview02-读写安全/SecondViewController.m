@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 
 @interface SecondViewController ()<UITableViewDelegate,UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,20 +22,16 @@
     [super viewDidLoad];
 
     [self setUpSubView];
-
-
 }
 
 - (void)setUpSubView {
-
-    [self.view layoutIfNeeded];
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 
-
-
+    [self.view layoutIfNeeded];
+    // 添加渐隐层
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.colors = @[(__bridge id)[UIColor clearColor].CGColor, (__bridge id)[UIColor whiteColor].CGColor];
     gradientLayer.locations = @[@0, @1];
@@ -52,7 +49,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
     cell.textLabel.text = @"一蓑烟雨任平生";
-//    cell.contentView.backgroundColor = [UIColor orangeColor];
     return cell;
 }
 

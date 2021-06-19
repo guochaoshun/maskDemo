@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wXs-Ue-en7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Imt-78-EfG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -37,6 +37,7 @@
                             <constraint firstItem="eAp-X6-Dlg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mrc-j8-Xdf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="IR0-2z-47g"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bgImageView" destination="GR6-u7-UBL" id="CTo-TQ-7MN"/>
@@ -45,7 +46,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13.043478260869566" y="54.910714285714285"/>
+            <point key="canvasLocation" x="-909" y="130"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uxp-Ke-TwZ">
+            <objects>
+                <navigationController id="Imt-78-EfG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YDY-6a-Knj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Aky-3L-R86" kind="relationship" relationship="rootViewController" id="oU3-aN-2ac"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYs-vO-gHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2832" y="454"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3q9-jT-RZ8">
+            <objects>
+                <viewController id="Aky-3L-R86" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Bk-Sr-oO3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lc-WE-pCY">
+                                <rect key="frame" x="162" y="296" width="90" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="拖动效果"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="YWL-Pc-rae"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4su-mD-IFI">
+                                <rect key="frame" x="162" y="391" width="90" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="渐隐效果"/>
+                                <connections>
+                                    <segue destination="wXs-Ue-en7" kind="show" id="9OX-CD-Tlm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DKD-5b-pof"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Axk-Cj-Q6v"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ItO-JH-iLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1974" y="457"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="Fb5-13-PQy">
@@ -90,6 +143,8 @@
                             <constraint firstItem="8vF-Fs-xAF" firstAttribute="trailing" secondItem="z0J-Rx-ns8" secondAttribute="trailing" id="ujr-6u-c1t"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="phR-Sd-Ssm"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bgView" destination="39O-N6-jFS" id="kbA-4F-N59"/>
                         <outlet property="tableView" destination="fbx-ol-Rel" id="32f-h9-A3S"/>
@@ -97,12 +152,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNL-yI-k0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-584.05797101449275" y="699.77678571428567"/>
+            <point key="canvasLocation" x="-909" y="891"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg" width="1100" height="1100"/>
         <image name="hidden" width="800" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

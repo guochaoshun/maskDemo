@@ -37,7 +37,7 @@
     CGFloat width = 300;
     // 方式1: 通过layer.mask
     self.maskLayer = [CALayer layer];
-    self.maskLayer.frame = CGRectMake(0, 0, width, width);
+    self.maskLayer.frame = CGRectMake(20, 200, width, width);
     self.maskLayer.cornerRadius = width*0.5;
     self.maskLayer.backgroundColor = UIColor.whiteColor.CGColor;
     self.hiddenImageView.layer.mask = self.maskLayer;
