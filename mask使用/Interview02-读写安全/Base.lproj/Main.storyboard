@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wXs-Ue-en7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,9 +47,64 @@
             </objects>
             <point key="canvasLocation" x="13.043478260869566" y="54.910714285714285"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Fb5-13-PQy">
+            <objects>
+                <viewController id="wXs-Ue-en7" customClass="SecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eie-aW-peR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="z0J-Rx-ns8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39O-N6-jFS">
+                                <rect key="frame" x="0.0" y="256" width="414" height="640"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fbx-ol-Rel">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="640"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <sections/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fbx-ol-Rel" secondAttribute="bottom" id="F5q-dp-Eb0"/>
+                                    <constraint firstAttribute="trailing" secondItem="fbx-ol-Rel" secondAttribute="trailing" id="ZSO-SX-7mU"/>
+                                    <constraint firstItem="fbx-ol-Rel" firstAttribute="top" secondItem="39O-N6-jFS" secondAttribute="top" id="dGX-fQ-Rzf"/>
+                                    <constraint firstAttribute="height" constant="640" id="qEa-VJ-d5u"/>
+                                    <constraint firstItem="fbx-ol-Rel" firstAttribute="leading" secondItem="39O-N6-jFS" secondAttribute="leading" id="rlE-bN-HiH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8vF-Fs-xAF"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="39O-N6-jFS" secondAttribute="trailing" id="4As-1w-vnf"/>
+                            <constraint firstAttribute="bottom" secondItem="z0J-Rx-ns8" secondAttribute="bottom" id="NS4-CT-0F5"/>
+                            <constraint firstItem="z0J-Rx-ns8" firstAttribute="leading" secondItem="8vF-Fs-xAF" secondAttribute="leading" id="Pjp-KC-pKx"/>
+                            <constraint firstItem="39O-N6-jFS" firstAttribute="leading" secondItem="eie-aW-peR" secondAttribute="leading" id="ZR4-70-kLs"/>
+                            <constraint firstItem="z0J-Rx-ns8" firstAttribute="top" secondItem="eie-aW-peR" secondAttribute="top" id="aPx-mx-BjW"/>
+                            <constraint firstAttribute="bottom" secondItem="39O-N6-jFS" secondAttribute="bottom" id="iSW-IV-eIW"/>
+                            <constraint firstItem="8vF-Fs-xAF" firstAttribute="trailing" secondItem="z0J-Rx-ns8" secondAttribute="trailing" id="ujr-6u-c1t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="39O-N6-jFS" id="kbA-4F-N59"/>
+                        <outlet property="tableView" destination="fbx-ol-Rel" id="32f-h9-A3S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNL-yI-k0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584.05797101449275" y="699.77678571428567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg" width="1100" height="1100"/>
         <image name="hidden" width="800" height="1200"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

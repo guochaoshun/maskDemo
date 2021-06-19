@@ -59,7 +59,7 @@
         case UIGestureRecognizerStateChanged: {// 拖拽中
             CGPoint translation = [pan translationInView:self.hiddenImageView];
             if (self.maskLayer) {
-                // CATransaction有隐式动画,使用CATransaction禁调隐式动画
+                // CATransaction有隐式动画,使用setDisableActions禁掉隐式动画
                 // 如果没有setDisableActions,这样会导致拖动的时候不跟手
                 [CATransaction begin];
                 [CATransaction setDisableActions:YES];

@@ -12,6 +12,7 @@
 		2DC38FBD20D9345200A3DC90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC38FBC20D9345200A3DC90 /* Assets.xcassets */; };
 		2DC38FC020D9345200A3DC90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC38FBE20D9345200A3DC90 /* LaunchScreen.storyboard */; };
 		2DC38FC320D9345200A3DC90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC38FC220D9345200A3DC90 /* main.m */; };
+		F0B84ED3267DB46600ECF34E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B84ED2267DB46600ECF34E /* SecondViewController.m */; };
 		F0F11737267D93D600737DB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC38FB720D9345100A3DC90 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,8 @@
 		2DC38FBF20D9345200A3DC90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DC38FC120D9345200A3DC90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DC38FC220D9345200A3DC90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0B84ED1267DB46600ECF34E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		F0B84ED2267DB46600ECF34E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				2DC38FB420D9345100A3DC90 /* AppDelegate.m */,
 				2DC38FB620D9345100A3DC90 /* ViewController.h */,
 				2DC38FB720D9345100A3DC90 /* ViewController.m */,
+				F0B84ED1267DB46600ECF34E /* SecondViewController.h */,
+				F0B84ED2267DB46600ECF34E /* SecondViewController.m */,
 				2DC38FB920D9345100A3DC90 /* Main.storyboard */,
 				2DC38FBC20D9345200A3DC90 /* Assets.xcassets */,
 				2DC38FBE20D9345200A3DC90 /* LaunchScreen.storyboard */,
@@ -141,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B84ED3267DB46600ECF34E /* SecondViewController.m in Sources */,
 				F0F11737267D93D600737DB5 /* ViewController.m in Sources */,
 				2DC38FC320D9345200A3DC90 /* main.m in Sources */,
 				2DC38FB520D9345100A3DC90 /* AppDelegate.m in Sources */,
