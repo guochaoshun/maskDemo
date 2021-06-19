@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="GR6-u7-UBL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hidden" translatesAutoresizingMaskIntoConstraints="NO" id="eAp-X6-Dlg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="eAp-X6-Dlg" secondAttribute="bottom" id="Dre-Pu-J7w"/>
+                            <constraint firstAttribute="bottom" secondItem="GR6-u7-UBL" secondAttribute="bottom" id="EvM-6H-Erp"/>
+                            <constraint firstItem="GR6-u7-UBL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Idv-iY-CIt"/>
+                            <constraint firstItem="eAp-X6-Dlg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pgs-WS-EMF"/>
+                            <constraint firstItem="GR6-u7-UBL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YbE-OP-oJe"/>
+                            <constraint firstItem="GR6-u7-UBL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bWP-B7-7YR"/>
+                            <constraint firstItem="eAp-X6-Dlg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gP8-GF-4Ey"/>
+                            <constraint firstItem="eAp-X6-Dlg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mrc-j8-Xdf"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="bgImageView" destination="GR6-u7-UBL" id="CTo-TQ-7MN"/>
+                        <outlet property="hiddenImageView" destination="eAp-X6-Dlg" id="7h6-e4-Iu1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="54.910714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="1100" height="1100"/>
+        <image name="hidden" width="800" height="1200"/>
+    </resources>
+</document>
